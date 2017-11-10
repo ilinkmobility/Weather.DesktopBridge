@@ -7,17 +7,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="ForecastList">
-            <ListView.ItemTemplate>
+    <StackPanel Height="320" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <GridView x:Name="Forecast" Margin="10, 10, 10, 10" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <GridView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="{Binding Date}" />
-                        <TextBlock Text="{Binding High}" />
-                        <TextBlock Text="{Binding Low}" />
+                    <StackPanel Height="150" Width="150">
+                        <TextBlock FontSize="15" Text="{Binding Date}" HorizontalAlignment="Center"></TextBlock>
+                        <Image Source="Assets/Sunny.png" HorizontalAlignment="Center" Height="60" Width="60" Margin="5, 5, 5, 5" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="High :  " Foreground="Red" HorizontalAlignment="Right" />
+                            <TextBlock FontSize="13" Foreground="Red" Text="{Binding High}" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="Low :  " Foreground="Green" HorizontalAlignment="Right" />
+                            <TextBlock FontSize="13" Foreground="Green" Text="{Binding Low}" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
                     </StackPanel>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </Grid>
+            </GridView.ItemTemplate>
+        </GridView>
+
+    </StackPanel>
 </Page>

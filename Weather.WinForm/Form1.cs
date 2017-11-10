@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopBridge;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +13,28 @@ namespace Weather.WinForm
 {
     public partial class Form1 : Form
     {
+        public List<Weather> forecastList;
+        public Helpers helpers;
         public string[] Cities = { "chennai", "mumbai", "delhi" };
 
         public Form1()
         {
             InitializeComponent();
+
+            helpers = new Helpers();
             
             pictureBox1.Image = Properties.Resources.Sunny;
+
+            if (!helpers.IsRunningAsUwp())
+            {
+                linkLabel1.Visible = false;
+            }
         }
 
         private async void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Uri uri = new Uri("open.weather.uwp://");
+            var list = WeatherServiceManager.Instance.ToJson(forecastList);
+            Uri uri = new Uri("open.weather.uwp://message?list=" + list);
             await Windows.System.Launcher.LaunchUriAsync(uri);
         }
 
@@ -31,12 +42,12 @@ namespace Weather.WinForm
         {
             if(comboBox1.SelectedIndex != 0)
             {
-                var forecast = WeatherServiceManager.Instance.GetForecast(Cities[comboBox1.SelectedIndex - 1]);
+                forecastList = WeatherServiceManager.Instance.GetForecast(Cities[comboBox1.SelectedIndex - 1]);
 
-                if (forecast.Count > 0)
+                if (forecastList.Count > 0)
                 {
-                    lblHigh.Text = "High : " + forecast[0].High;
-                    lblLow.Text = "Low : " + forecast[0].Low;
+                    lblHigh.Text = "High : " + forecastList[0].High;
+                    lblLow.Text = "Low : " + forecastList[0].Low;
                 }
             }
         }

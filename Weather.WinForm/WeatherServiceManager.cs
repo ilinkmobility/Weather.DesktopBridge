@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -63,6 +64,11 @@ namespace Weather.WinForm
             }
 
             return forecast;
+        }
+
+        public string ToJson(List<Weather> list)
+        {
+            return JsonConvert.SerializeObject(list); ;
         }
     }
 }
