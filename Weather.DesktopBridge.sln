@@ -10,6 +10,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather.UWP", "Weather.UWP\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather.WinForm", "Weather.WinForm\Weather.WinForm.csproj", "{A2C90094-5012-4BDF-BC8B-C69FA6484505}"
 EndProject
+Project("{365BE41E-7993-430D-A5E6-1381A54BC077}") = "Weather.DesktopBridge.Debug", "Weather.DesktopBridge.Debug\Weather.DesktopBridge.Debug.vsdproj", "{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{111CFC75-C414-4812-B923-761F7D4600A6} = {111CFC75-C414-4812-B923-761F7D4600A6}
+		{A2C90094-5012-4BDF-BC8B-C69FA6484505} = {A2C90094-5012-4BDF-BC8B-C69FA6484505}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,7 +28,9 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{111CFC75-C414-4812-B923-761F7D4600A6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{111CFC75-C414-4812-B923-761F7D4600A6}.Debug|Any CPU.ActiveCfg = Release|x86
+		{111CFC75-C414-4812-B923-761F7D4600A6}.Debug|Any CPU.Build.0 = Release|x86
+		{111CFC75-C414-4812-B923-761F7D4600A6}.Debug|Any CPU.Deploy.0 = Release|x86
 		{111CFC75-C414-4812-B923-761F7D4600A6}.Debug|ARM.ActiveCfg = Debug|ARM
 		{111CFC75-C414-4812-B923-761F7D4600A6}.Debug|ARM.Build.0 = Debug|ARM
 		{111CFC75-C414-4812-B923-761F7D4600A6}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -58,6 +66,30 @@ Global
 		{A2C90094-5012-4BDF-BC8B-C69FA6484505}.Release|x64.Build.0 = Release|Any CPU
 		{A2C90094-5012-4BDF-BC8B-C69FA6484505}.Release|x86.ActiveCfg = Release|Any CPU
 		{A2C90094-5012-4BDF-BC8B-C69FA6484505}.Release|x86.Build.0 = Release|Any CPU
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|ARM.Build.0 = Debug|ARM
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|ARM.Deploy.0 = Debug|ARM
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|x64.ActiveCfg = Debug|x64
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|x64.Build.0 = Debug|x64
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|x64.Deploy.0 = Debug|x64
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|x86.ActiveCfg = Debug|x86
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|x86.Build.0 = Debug|x86
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Debug|x86.Deploy.0 = Debug|x86
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|ARM.ActiveCfg = Release|ARM
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|ARM.Build.0 = Release|ARM
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|ARM.Deploy.0 = Release|ARM
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|x64.ActiveCfg = Release|x64
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|x64.Build.0 = Release|x64
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|x64.Deploy.0 = Release|x64
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|x86.ActiveCfg = Release|x86
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|x86.Build.0 = Release|x86
+		{0390FEFD-7C22-47AC-91A8-DF4EB6152F3E}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

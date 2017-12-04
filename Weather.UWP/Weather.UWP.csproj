@@ -21,6 +21,7 @@
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>01B31727C386F99EA54A0AD505420CE9BFB60035</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -108,10 +109,22 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="desktop\Weather.WinForm.exe.config" />
+    <None Include="desktop\Weather.WinForm.vshost.exe.config" />
+    <None Include="desktop\Weather.WinForm.vshost.exe.manifest" />
     <None Include="Weather.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Sunny.png" />
+    <Content Include="desktop\DesktopBridge.Helpers.dll" />
+    <Content Include="desktop\Newtonsoft.Json.dll" />
+    <Content Include="desktop\Newtonsoft.Json.xml" />
+    <Content Include="desktop\System.Runtime.WindowsRuntime.dll" />
+    <Content Include="desktop\System.Runtime.WindowsRuntime.UI.Xaml.dll" />
+    <Content Include="desktop\System.Runtime.WindowsRuntime.UI.Xaml.xml" />
+    <Content Include="desktop\System.Runtime.WindowsRuntime.xml" />
+    <Content Include="desktop\Weather.WinForm.exe" />
+    <Content Include="desktop\Weather.WinForm.pdb" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -149,7 +162,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="desktop\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
